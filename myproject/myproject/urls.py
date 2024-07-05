@@ -10,7 +10,8 @@ router.register('inicio', Usuario_view_login, basename='inicio')
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', include(router.urls)),
+    path('', include(router.urls)), 
+    # path('registro', Usuario_view_registro.as_view({'get': 'list'}), name='registro'),
     path('token', TokenProvider.as_view(), name = 'token'),
 ]
 
